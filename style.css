@@ -1,8 +1,45 @@
 .map {
     position: absolute;
-    top: 50px;
-    left: 50px;
-    right: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    width: 90%;
+    width: 100%;
+    margin-top: 0;
+}
+
+.map-overlay-search {
+    position: relative;
+    font: 14px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    top: 0;
+    left: 0;
+    width: 260px;
+    margin: 10px 0 0 10px;
+    padding: 10px;
+    /*around elements inside of overlay*/
+    overflow: visible;
+}
+
+.geocoder {
+    position: relative;
+    margin: 10px 0 10px;
+}
+
+#returnbutton {
+    position: relative;
+    margin: 10px 0 10px;
+    width: 100%;
+}
+
+.map-overlay-data {
+    position: relative;
+    font: 14px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    width: 260px;
+    top: 0;
+    left: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    overflow: visible;
 }

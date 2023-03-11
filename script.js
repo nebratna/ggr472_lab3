@@ -30,7 +30,7 @@ map.on('load', () => {
         'paint': {
             'fill-color': [
                 'step', // STEP expression produces stepped results based on value pairs
-                ['get', 'grlan19_12'], // GET expression retrieves property value from 'capacity' data field
+                ['get', 'grlan19_12'], // 
                 '#a64dff', // Colour assigned to any values < first step
                 0.1, '#ffffcc', // Colours assigned to values >= each step
                 0.22, '#c2e699',
@@ -52,14 +52,14 @@ map.on('load', () => {
         'source': 'neighbNDVI',
         'paint': {
             'fill-color': [
-                'step', // STEP expression produces stepped results based on value pairs
-                ['get', 'grlan19_12'], // GET expression retrieves property value from 'capacity' data field
-                '#a64dff', // Colour assigned to any values < first step
-                0.1, '#ffffcc', // Colours assigned to values >= each step
+                'step', 
+                ['get', 'grlan19_12'], 
+                '#a64dff', 
+                0.1, '#ffffcc', 
                 0.22, '#c2e699',
                 0.31, '#78c679',
-                0.39, '#31a354', //0.39 to 0.49
-                0.49, '#006837', //0.49 and higher
+                0.39, '#31a354', 
+                0.49, '#006837', 
 
             ],
             'fill-opacity': 0.8,
@@ -100,31 +100,10 @@ map.on('mousemove', 'NDVI', (e) => {
     }
 })
 
-
-
-
-
-
 /*--------------------------------------------------------------------
 ADDING MAPBOX CONTROLS AS ELEMENTS ON MAP
 --------------------------------------------------------------------*/
-//Add search control to map overlay
-//Requires plugin as source in HTML body
-map.addControl(
-    new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl,
-        countries: "ca" //Limit to Canada only
-    })
-);
-
-//Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl());
-
-//Add fullscreen option to the map
-map.addControl(new mapboxgl.FullscreenControl());
-
-//Create geocoder variable (and remove previous geocoder)
+//Create geocoder variable
 const geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl,
@@ -134,5 +113,23 @@ const geocoder = new MapboxGeocoder({
 //Use geocoder div to position geocoder on page
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
+//Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+
+//Add fullscreen option to the map
+map.addControl(new mapboxgl.FullscreenControl());
 
 
+
+/*--------------------------------------------------------------------
+ADDING INTERACTIVITY BASED ON HTML EVENT
+--------------------------------------------------------------------*/
+
+//Add event listeneer which returns map view to full screen on button click
+document.getElementById('returnbutton').addEventListener('click', () => {
+    map.flyTo({
+        center: [-79.408, 43.7056],
+        zoom: 10,
+        essential: true
+    });
+});
