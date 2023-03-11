@@ -27,12 +27,24 @@
     <!-- MAP CONTAINER -->
     <div id='map' class='map'></div>
 
-     <!-- NAVIGATION ELEMENTS -->
+    <!-- NAVIGATION ELEMENTS -->
     <div class='map-overlay-search'>
         <label>Search for location</label>
         <div id="geocoder" class="geocoder"></div>
-        <button type="button" class="btn btn-primary btn-sm" id="returnbutton">Return to full extent</button>
+        <button type="button" class="btn btn-outline-secondary" id="returnbutton">Return to full extent</button>
     </div>
+
+    <!-- LEGEND-->
+    <div id='legend' class='legend'>
+        <h6>NDVI</h6>
+        <div><span style='background-color:#ffffcc'></span>0.10 - 0.22</div>
+        <div><span style='background-color:#c2e699'></span>0.22 - 0.31</div>
+        <div><span style='background-color:#78c679'></span>0.32 - 0.39</div>
+        <div><span style='background-color:#31a354'></span>0.40 - 0.49</div>
+        <div><span style='background-color:#006837'></span>0.50 - 0.62</div>
+
+    </div>
+
 
     <script src="script.js"></script>
 
