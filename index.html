@@ -45,6 +45,186 @@
 
     </div>
 
+    <!-- INTERACTIVITY / checkboxes -->
+    <div class='map-overlay-data'>
+        <label>Filter map view</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="legendcheck"> <!--bootstrap checkboxes-->
+            <label class="form-check-label" for="flexCheckDefault">
+                Legend
+            </label>
+        </div>
+
+        <form>
+            <fieldset id="neighbourhoodfieldset">
+                <label>Select neighbourhood</label>
+                <select id="neighbourhood" name="neighbourhood">
+                    <option value="" disabled selected>Select neighbourhood</option>
+                    <option value="Agincourt North">Agincourt North</option>
+                    <option value=" Agincourt South-Malvern West">Agincourt South-Malvern West</option>
+                    <option value="Alderwood">Alderwood</option>
+                    <option value="Annex">Annex</option>
+                    <option value="Avondale">Avondale</option>
+                    <option value="Banbury-Don Mills">Banbury-Don Mills</option>
+                    <option value="Bathurst Manor">Bathurst Manor</option>
+                    <option value="Bay-Cloverhill">Bay-Cloverhill</option>
+                    <option value="Bayview Village">ayview Village</option>
+                    <option value="Bayview Woods-Steeles">Bayview Woods-Steeles</option>
+                    <option value="Bedford Park-Nortown">Bedford Park-Nortown</option>
+                    <option value="Beechborough-Greenbrook">Beechborough-Greenbrook</option>
+                    <option value="Bendale South">Bendale South</option>
+                    <option value="Bendale-Glen Andrew">Bendale-Glen Andrew</option>
+                    <option value="Birchcliffe-Cliffside">Birchcliffe-Cliffside</option>
+                    <option value="Black Creek">Black Creek</option>
+                    <option value="Blake-Jones">Blake-Jones</option>
+                    <option value="Briar Hill-Belgravia">Briar Hill-Belgravia</option>
+                    <option value="Bridle Path-Sunnybrook-York Mills">Bridle Path-Sunnybrook-York Mills</option>
+                    <option value="Broadview North">Broadview North</option>
+                    <option value="Brookhaven-Amesbury">Brookhaven-Amesbury</option>
+                    <option value="Cabbagetown-South St.James Town">Cabbagetown-South St.James Town</option>
+                    <option value="Caledonia-Fairbank">Caledonia-Fairbank</option>
+                    <option value="Casa Loma">Casa Loma</option>
+                    <option value="Centennial Scarborough">Centennial Scarborough</option>
+                    <option value="Church-Wellesley">Church-Wellesley</option>
+                    <option value="Clairlea-Birchmount">Clairlea-Birchmount</option>
+                    <option value="Clanton Park">Clanton Park</option>
+                    <option value="Cliffcrest">Cliffcrest</option>
+                    <option value="Corso Italia-Davenport">Corso Italia-Davenport</option>
+                    <option value="Danforth">Danforth</option>
+                    <option value="Danforth East York">anforth East York</option>
+                    <option value="Don Valley Village">Don Valley Village</option>
+                    <option value="Dorset Park">Dorset Park</option>
+                    <option value="Dovercourt Village">Dovercourt Village</option>
+                    <option value="Downsview">Downsview</option>
+                    <option value="Downtown Yonge East">Downtown Yonge East</option>
+                    <option value="Dufferin Grove">Dufferin Grove</option>
+                    <option value="East End-Danforth">East End-Danforth</option>
+                    <option value="East L'Amoreaux">East L'Amoreaux/option>
+                    <option value="East Willowdale">East Willowdale</option>
+                    <option value="Edenbridge-Humber Valley">Edenbridge-Humber Valley</option>
+                    <option value="Eglinton East">Eglinton East</option>
+                    <option value="Elms-Old Rexdale">Elms-Old Rexdale</option>
+                    <option value="Englemount-Lawrence">nglemount-Lawrence</option>
+                    <option value="Eringate-Centennial-West Deane">Eringate-Centennial-West Deane</option>
+                    <option value="Etobicoke City Centre">Etobicoke City Centre</option>
+                    <option value="Etobicoke West Mall">Etobicoke West Mall</option>
+                    <option value="Fenside-Parkwoods">Fenside-Parkwoods</option>
+                    <option value="Flemingdon Park">Flemingdon Park</option>
+                    <option value="Forest Hill North">Forest Hill North</option>
+                    <option value="Forest Hill South">Forest Hill South</option>
+                    <option value="Fort York-Liberty Village">Fort York-Liberty Village</option>
+                    <option value="Glenfield-Jane Heights">Glenfield-Jane Heights</option>
+                    <option value="Golfdale-Cedarbrae-Woburn">Golfdale-Cedarbrae-Woburn</option>
+                    <option value="Greenwood-Coxwell">Greenwood-Coxwell</option>
+                    <option value="Guildwood">Guildwood</option>
+                    <option value="Harbourfront-CityPlace">Harbourfront-CityPlace</option>
+                    <option value="Henry Farm">Henry Farm</option>
+                    <option value="High Park North">High Park North</option>
+                    <option value="High Park-Swansea">High Park-Swansea</option>
+                    <option value="Highland Creek">Highland Creek</option>
+                    <option value="Hillcrest Village">Hillcrest Village</option>
+                    <option value="Humber Bay Shores">Humber Bay Shores</option>
+                    <option value="Humber Heights-Westmount">Humber Heights-Westmount</option>
+                    <option value="Humber Summit">Humber Summit</option>
+                    <option value="Humbermede">Humbermede</option>
+                    <option value="Humewood-Cedarvale">Humewood-Cedarvale</option>
+                    <option value="Ionview">Ionview</option>
+                    <option value="Islington">Islington</option>
+                    <option value="Junction Area">Junction Area</option>
+                    <option value="Junction-Wallace Emerson">Junction-Wallace Emerson</option>
+                    <option value="Keelesdale-Eglinton West">Keelesdale-Eglinton West</option>
+                    <option value="Kennedy Park">Kennedy Park</option>
+                    <option value="Kensington-Chinatown">Kensington-Chinatown</option>
+                    <option value="Kingsview Village-The Westway">Kingsview Village-The Westway</option>
+                    <option value="Kingsway South">Kingsway South</option>
+                    <option value="Lambton Baby Point">Lambton Baby Point</option>
+                    <option value="L'Amoreaux West">L'Amoreaux West</option>
+                    <option value="Lansing-Westgate">Lansing-Westgate</option>
+                    <option value="Lawrence Park North">Lawrence Park North</option>
+                    <option value="Lawrence Park South">Lawrence Park South</option>
+                    <option value="Leaside-Bennington">Leaside-Bennington</option>
+                    <option value="Little Portugal">Little Portugal</option>
+                    <option value="Long Branch">Long Branch</option>
+                    <option value="Malvern East">Malvern East</option>
+                    <option value="Malvern West">Malvern West</option>
+                    <option value="Maple Leaf">Maple Leaf</option>
+                    <option value="Markland Wood">Markland Wood</option>
+                    <option value="Milliken">Milliken</option>
+                    <option value="Mimico-Queensway">Mimico-Queensway</option>
+                    <option value="Morningside">Morningside</option>
+                    <option value="Morningside Heights">Morningside Heights</option>
+                    <option value="Moss Park">Moss Park</option>
+                    <option value="Mount Dennis">Mount Dennis</option>
+                    <option value="Mount Olive-Silverstone-Jamestown">Mount Olive-Silverstone-Jamestown</option>
+                    <option value="Mount Pleasant East">Mount Pleasant East</option>
+                    <option value="New Toronto">New Toronto</option>
+                    <option value="Newtonbrook East">Newtonbrook East</option>
+                    <option value="Newtonbrook West">Newtonbrook West</option>
+                    <option value="North Riverdale">North Riverdale</option>
+                    <option value="North St.James Town">North St.James Town</option>
+                    <option value="North Toronto">North Toronto</option>
+                    <option value="Oakdale-Beverley Heights">Oakdale-Beverley Heights</option>
+                    <option value="Oakridge">Oakridge</option>
+                    <option value="Oakwood Village">Oakwood Village</option>
+                    <option value="O'Connor-Parkview">O'Connor-Parkview</option>
+                    <option value="Old East York">Old East York</option>
+                    <option value="Palmerston-Little Italy">Palmerston-Little Italy</option>
+                    <option value="Parkwoods-O'Connor Hills">Parkwoods-O'Connor Hills</option>
+                    <option value="Pelmo Park-Humberlea">Pelmo Park-Humberlea</option>
+                    <option value="Playter Estates-Danforth">Playter Estates-Danforth</option>
+                    <option value="Pleasant View">Pleasant View</option>
+                    <option value="Princess-Rosethorn">Princess-Rosethorn</option>
+                    <option value="Regent Park">Regent Park</option>
+                    <option value="Rexdale-Kipling">Rexdale-Kipling</option>
+                    <option value="Rockcliffe-Smythe">Rockcliffe-Smythe</option>
+                    <option value="Roncesvalles">Roncesvalles</option>
+                    <option value="Rosedale-Moore Park">Rosedale-Moore Park</option>
+                    <option value="Runnymede-Bloor West Village">Runnymede-Bloor West Village</option>
+                    <option value="Rustic">Rustic</option>
+                    <option value="Scarborough Village">Scarborough Village</option>
+                    <option value="South Eglinton-Davisville">South Eglinton-Davisville</option>
+                    <option value="South Parkdale">South Parkdale</option>
+                    <option value="South Riverdale">South Riverdale</option>
+                    <option value="St Lawrence-East Bayfront-The Islands">St Lawrence-East Bayfront-The Islands</option>
+                    <option value="St.Andrew-Windfields">St.Andrew-Windfields</option>
+                    <option value="Steeles">Steeles</option>
+                    <option value="Stonegate-Queensway">Stonegate-Queensway</option>
+                    <option value="Tam O'Shanter-Sullivan">Tam O'Shanter-Sullivan</option>
+                    <option value="Taylor-Massey">Taylor-Massey</option>
+                    <option value="The Beaches">The Beaches</option>
+                    <option value="Thistletown-Beaumond Heights">Thistletown-Beaumond Heights</option>
+                    <option value="Thorncliffe Park">Thorncliffe Park</option>
+                    <option value="Trinity-Bellwoods">Trinity-Bellwoods</option>
+                    <option value="University">University</option>
+                    <option value="Victoria Village">Victoria Village</option>
+                    <option value="Wellington Place">Wellington Place</option>
+                    <option value="West Hill">West Hill</option>
+                    <option value="West Humber-Clairville">West Humber-Clairville</option>
+                    <option value="West Queen West">West Queen West</option>
+                    <option value="West Rouge">West Rouge</option>
+                    <option value="Westminster-Branson">Westminster-Branson</option>
+                    <option value="Weston">Weston</option>
+                    <option value="Weston-Pelham Park">Weston-Pelham Park</option>
+                    <option value="Wexford/Maryvale">Wexford/Maryvale</option>
+                    <option value="Willowdale West">Willowdale West</option>
+                    <option value="Willowridge-Martingrove-Richview">Willowridge-Martingrove-Richview</option>
+                    <option value="Woburn North">Woburn North</option>
+                    <option value="Woodbine Corridor">Woodbine Corridor</option>
+                    <option value="Woodbine-Lumsden">Woodbine-Lumsden</option>
+                    <option value="Wychwood">Wychwood</option>
+                    <option value="Yonge-Bay Corridor">Yonge-Bay Corridor</option>
+                    <option value="Yonge-Doris">Yonge-Doris</option>
+                    <option value="Yonge-Eglinton">Yonge-Eglinton</option>
+                    <option value="Yonge-St.Clair">Yonge-St.Clair</option>
+                    <option value="York University Heights">York University Heights</option>
+                    <option value="Yorkdale-Glen Park">Yorkdale-Glen Park</option>
+                    <option value="All">Show all</option>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+
+
 
     <script src="script.js"></script>
 

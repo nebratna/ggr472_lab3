@@ -37,7 +37,7 @@ map.on('load', () => {
                 0.31, '#78c679',
                 0.39, '#31a354', //0.39 to 0.49
                 0.49, '#006837', //0.49 and higher
-                
+
             ],
             'fill-opacity': 0.5,
             'fill-outline-color': 'black'
@@ -52,14 +52,14 @@ map.on('load', () => {
         'source': 'neighbNDVI',
         'paint': {
             'fill-color': [
-                'step', 
-                ['get', 'grlan19_12'], 
-                '#a64dff', 
-                0.1, '#ffffcc', 
+                'step',
+                ['get', 'grlan19_12'],
+                '#a64dff',
+                0.1, '#ffffcc',
                 0.22, '#c2e699',
                 0.31, '#78c679',
-                0.39, '#31a354', 
-                0.49, '#006837', 
+                0.39, '#31a354',
+                0.49, '#006837',
 
             ],
             'fill-opacity': 0.8,
@@ -132,4 +132,39 @@ document.getElementById('returnbutton').addEventListener('click', () => {
         zoom: 10,
         essential: true
     });
+});
+
+//Change display of legend based on check box
+let legendcheck = document.getElementById('legendcheck');
+
+legendcheck.addEventListener('click', () => {
+    if (legendcheck.checked) {
+        legendcheck.checked = true;
+        legend.style.display = 'block';
+    }
+    else {
+        legend.style.display = "none";
+        legendcheck.checked = false;
+    }
+});
+
+
+//Filter data layer to show selected Neighbrourhood from dropdown selection
+let neighbourhoodvalue;
+
+document.getElementById("neighbourhoodfieldset").addEventListener('change', (e) => {
+    neighbourhoodvalue = document.getElementById('neighbourhood').value;
+    console.log(neighbourhoodvalue);
+
+    if (neighbourhoodvalue == 'All') {
+        map.setFilter(
+            'NDVI', /*same as layer name on line 26*/
+            ['has', 'FIELD_7'] //returns all polygons from layer that have a value in FIELD_7);
+        );
+    } else {
+        map.setFilter(
+            'NDVI',
+            ['==', ['get', 'FIELD_7'], neighbourhoodvalue] //returns polygon with FIELD_7 value that matches dropdown selection);
+        );
+    }
 });
