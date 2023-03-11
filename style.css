@@ -52,8 +52,8 @@
 /*styling of the rows of the legend*/
 .legend div span {
     display: inline-block;
-    border-radius: 0%; /*curve border to make a circle*/
-    height: 10px; /*size of circle*/
+    border-radius: 0%; /*0% to make it a square*/
+    height: 10px; /*size of square*/
     width: 10px;
-    margin-right: 5px; /*position of circle*/
+    margin-right: 5px; /*position of square*/
 }
